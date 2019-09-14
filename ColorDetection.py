@@ -7,7 +7,7 @@ upperBound=np.array([130,255,255])
 cam= cv2.VideoCapture(0)
 kernelOpen=np.ones((5,5))
 kernelClose=np.ones((20,20))
-
+#set font
 font=cv2.cv.InitFont(cv2.cv.CV_FONT_HERSHEY_SIMPLEX,2,0.5,0,3,1)
 
 while True:
@@ -37,6 +37,6 @@ while True:
     k = cv2.waitKey(30)& 0xff
     if k == 27:
         break
-
+#release resources
 cam.release()
 cv2.destroyAllWindows()
